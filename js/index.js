@@ -140,6 +140,8 @@ function updateContact() {
 function clearInput(){
     ContactName.value=""
     ContactURL.value=""
+         ContactName.classList.remove("is-valid", "is-invalid");
+    ContactURL.classList.remove("is-valid", "is-invalid");
 }
 //   7/  check exist function
 function checkExist() {
@@ -175,4 +177,5 @@ function validartionURL() {
     return false 
   }
 }
+
 
