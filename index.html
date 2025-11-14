@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookMark</title>
+  <link rel="shortcut icon" href="./img/2899445.png" type="image/x-icon">
+  <!-- Google fonts links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap links -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- fontawesome link -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <!-- style file link -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <!--upper title -->
+      <div class="titleSection">
+        <h1 class=" text-center py-5 position-relative underlineStyle">Bookmarker</h1>
+        <h2 class="text-center mt-5 mb-2 gradient-text"> <span><i class="fa-solid fa-bookmark"></i></span> Bookmark your
+          favorite sites <span><i class="fa-solid fa-bookmark"></i></span></h2>
+      </div>
+      <!--form -->
+      <div>
+        <label class="fw-bolder" for=""><span><i class="fa-solid fa-book-bookmark pe-2 py-3"></i></span> Site
+          Name</label>
+        <input oninput="validartionName()" type="text" class="form-control" id="bookmark" placeholder="Bookmark Name">
+      </div>
+      <div>
+        <label class="fw-bolder" for=""><span><i class="fa-solid fa-link pe-2 py-3"></i></span> Site URL</label>
+        <input oninput="validartionURL()" type="text" class="form-control" id="websiteURL" placeholder="Website URL">
+      </div>
+      <!-- button -->
+      <div class="text-center underlineStyle">
+        <button onclick="addContact()" class="btn btn-primary my-4 btn-submit px-5" id="submitBtn">Submit</button>
+        <button onclick="updateContact()" class="d-none btn btn-primary my-4 btn-update px-5" id="updateBtn">updated</button>
+      </div>
+      <table class="w-100 bg-white text-center mt-4 " >
+        <thead class="bg-white ">
+          <tr class="py-5">
+            <th class="py-2">Index </th>
+            <th class="py-2">Website Name </th>
+            <th class="py-2">Visit</th>
+            <th class="py-2">Delete</th>
+            <th class="py-2">Update</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </main>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/index.js"></script>
+</body>
+
+</html>
